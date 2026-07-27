@@ -146,6 +146,15 @@ function renderSidebar() {
     PERSONA_ORDER.forEach((key) => {
         const p = PERSONAS[key];
         const item = document.createElement("button");
+        item.onclick = async () => {
+            activeKey = key;
+            await switchPersona(key);
+            renderSidebar();
+            renderChat();
+            updateMemoryPanelFromPersona(
+                PERSONAS[key]
+            );
+        };
         item.className = "chat-item" + (key === activeKey ? " active" : "");
         item.dataset.key = key;
 
@@ -336,6 +345,29 @@ function updateMemoryFromServer(memory) {
 
 sendBtn.addEventListener("click", sendMessage);
 msgInput.addEventListener("keydown", (e) => { if (e.key === "Enter") sendMessage(); });
+
+// ================== PERSONA SWITCH ==================
+async function switchPersona(persona) {
+    try {
+        const response = await fetch(
+            "http://localhost:3000/persona",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    persona
+                })
+            }
+        );
+        const data = await response.json();
+        console.log(data);
+    }
+    catch (err) {
+        console.error(err);
+    }
+}
 
 // ================== THEME SWITCH ==================
 themeSwitch.addEventListener("click", (e) => {

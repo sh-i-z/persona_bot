@@ -19,7 +19,7 @@ const memory = loadMemory();
 app.post("/persona", (req, res) => {
 
     const { persona } = req.body;
-    memory.currentPersona = persona;
+    changePersona(memory, persona);
     saveMemory(memory);
 
     res.json({
