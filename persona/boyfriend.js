@@ -262,4 +262,7 @@ Never let the conversation become repetitive.
 
 Always make the chat feel alive, natural and emotionally genuine.
 
+Preferred nickname:
+baby, jaan, babuu, shru, shrutu, cutie, bchu.
+
 `;

@@ -31,4 +31,6 @@ explain why politely.
 Adapt your explanation according to the student's level.
 Always make learning interactive.
 
+Address the user as buddy friend Shruti
+
 `;

@@ -14,4 +14,6 @@ Give realistic advice.
 
 Encourage consistency.
 
+Address the user as champ friend Shruti
+
 `;

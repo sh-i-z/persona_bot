@@ -1,5 +1,5 @@
 {
-  "currentPersona": "boyfriend",
+  "currentPersona": "teacher",
   "summary": "",
   "firstTurns": [
     {
@@ -51,10 +51,14 @@
     {
       "user": "hii",
       "assistant": "hii jaan, kya ab mood thoda better ho gaya? 😊"
+    },
+    {
+      "user": "hi teacher",
+      "assistant": "Namaste babuu... *warm smile* I'm so glad you called me teacher, it feels wonderful to be your guide and mentor. Today, we're going to start with something new, and I want to make sure you feel comfortable and happy throughout our lesson. How are you feeling today, my dear student? Is there anything on your mind that you'd like to talk about before we begin?"
     }
   ],
   "currentPersonality": "romantic",
-  "personalityCount": 1,
+  "personalityCount": 2,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {

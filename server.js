@@ -33,7 +33,15 @@ app.post("/chat", async (req, res) => {
 
     try {
 
-        const { message } = req.body;
+        const {
+            message,
+            persona
+        } = req.body;
+
+        if (persona) {
+            changePersona(memory, persona);
+        }
+        console.log(memory.currentPersona);
         if (!message || typeof message !== "string") {
             return res.status(400).json({
                 error: "Message is required"

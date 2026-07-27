@@ -5,7 +5,6 @@ import { PERSONALITIES } from "./personalities.js";
 export function buildPrompt(memory, userMessage) {
 
     const persona = getPersona(memory.currentPersona);
-
     const messages = [];
 
     messages.push({
@@ -18,11 +17,8 @@ export function buildPrompt(memory, userMessage) {
     // =============================
 
     if (memory.summary.trim() !== "") {
-
         messages.push({
-
             role: "system",
-
             content:
                 `Conversation Summary:\n${memory.summary}`
 
@@ -34,13 +30,18 @@ export function buildPrompt(memory, userMessage) {
     // User Profile
     // =============================
 
+    const profile = { ...memory.userProfile };
+
+    // Only boyfriend uses nickname
+    if (memory.currentPersona !== "boyfriend") {
+        delete profile.nickname;
+    }
+
     messages.push({
-
         role: "system",
+        content: `User Profile:
 
-        content:
-            `User Profile:\n${JSON.stringify(memory.userProfile, null, 2)}`
-
+${JSON.stringify(profile, null, 2)}`
     });
 
     // =============================
@@ -53,28 +54,18 @@ export function buildPrompt(memory, userMessage) {
     );
 
     if (relevantTurns.length > 0) {
-
         let relevantText = "";
-
         relevantTurns.forEach(turn => {
-
             relevantText +=
-
                 `User: ${turn.user}\n`;
-
             relevantText +=
-
                 `Assistant: ${turn.assistant}\n\n`;
-
         });
 
         messages.push({
-
             role: "system",
-
             content:
                 `Relevant Past Conversations:\n\n${relevantText}`
-
         });
 
     }
@@ -86,19 +77,13 @@ export function buildPrompt(memory, userMessage) {
     memory.recentTurns.forEach(turn => {
 
         messages.push({
-
             role: "user",
-
             content: turn.user
-
         });
 
         messages.push({
-
             role: "assistant",
-
             content: turn.assistant
-
         });
 
     });
@@ -108,11 +93,8 @@ export function buildPrompt(memory, userMessage) {
     // =============================
 
     messages.push({
-
         role: "user",
-
         content: userMessage
-
     });
 
     return messages;
