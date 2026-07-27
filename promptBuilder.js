@@ -1,34 +1,16 @@
-import { BF_PERSONA } from "./persona/boyfriend.js";
+import { getPersona } from "./getPersona.js";
 import { searchMemory } from "./memorySearch.js";
 import { PERSONALITIES } from "./personalities.js";
 
 export function buildPrompt(memory, userMessage) {
 
-    const randomPersonality =
-
-        personalities[
-        Math.floor(
-            Math.random() * personalities.length
-        )
-        ];
+    const persona = getPersona(memory.currentPersona);
 
     const messages = [];
 
-    // =============================
-    // Persona
-    // =============================
-
     messages.push({
-
         role: "system",
-
-        content:
-            BF_PERSONA +
-            "\n\n" +
-            PERSONALITIES[
-            memory.currentPersonality || "romantic"
-            ]
-
+        content: `${persona}${PERSONALITIES[memory.currentPersonality || "romantic"]}`
     });
 
     // =============================

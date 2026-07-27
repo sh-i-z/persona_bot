@@ -19,17 +19,12 @@ const memory = loadMemory();
 app.post("/persona", (req, res) => {
 
     const { persona } = req.body;
-
     memory.currentPersona = persona;
-
     saveMemory(memory);
 
     res.json({
-
         success: true,
-
         currentPersona: persona
-
     });
 
 });
@@ -39,13 +34,10 @@ app.post("/chat", async (req, res) => {
     try {
 
         const { message } = req.body;
-
         if (!message || typeof message !== "string") {
-
             return res.status(400).json({
                 error: "Message is required"
             });
-
         }
 
         // ==========================
@@ -59,31 +51,22 @@ app.post("/chat", async (req, res) => {
         // ==========================
 
         const turn = {
-
             user: message,
-
             assistant: reply
-
         };
 
         if (memory.firstTurns.length < 10) {
-
             memory.firstTurns.push(turn);
-
         }
 
         else {
-
             memory.recentTurns.push(turn);
-
         }
 
         // Keep only latest 20 turns
 
         while (memory.recentTurns.length > 20) {
-
             memory.recentTurns.shift();
-
         }
 
         // ==========================
@@ -91,13 +74,9 @@ app.post("/chat", async (req, res) => {
         // ==========================
 
         await updateUserProfile(
-
             memory,
-
             message,
-
             reply
-
         );
 
         // ==========================
@@ -105,30 +84,20 @@ app.post("/chat", async (req, res) => {
         // ==========================
 
         if (memory.recentTurns.length >= 20) {
-
             memory.summary = await generateSummary(memory);
-
             memory.recentTurns = [];
-
         }
 
         //Personality Update
         memory.personalityCount++;
 
         if (memory.personalityCount >= 5) {
-
             const moods = [
-
                 "romantic",
-
                 "funny",
-
                 "protective",
-
                 "supportive",
-
                 "flirty"
-
             ];
 
             const random =
@@ -154,21 +123,15 @@ app.post("/chat", async (req, res) => {
         // ==========================
 
         res.json({
-
             reply,
-
             memory
-
         });
 
     }
 
     catch (err) {
-
         console.error(err);
-
         res.status(500).json({
-
             error: err.message
 
         });
@@ -181,11 +144,7 @@ app.post("/chat", async (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-
     console.log(
-
         `Server running on ${PORT}`
-
     );
-
 });
