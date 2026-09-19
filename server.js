@@ -8,6 +8,7 @@ import { updateUserProfile } from "./profile.js";
 import { generateSummary } from "./summary.js";
 import { detectEmotion } from "./emotion.js";
 import { changePersona } from "./memory.js";
+import { extractText } from "./RAG/documentloader/documentLoader.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -18,7 +19,7 @@ app.use(express.json());
 // Load memory once when server starts
 const memory = loadMemory();
 
-app.post("/upload", upload.single("document"), (req, res) => {
+app.post("/upload", upload.single("document"), async (req, res) => {
 
     try {
 
@@ -32,18 +33,25 @@ app.post("/upload", upload.single("document"), (req, res) => {
         console.log("File type:", req.file.mimetype);
         console.log("File size:", req.file.size);
 
+        const text = await extractText(req.file);
+
+        console.log("Extracted text length:", text.length);
+
+        console.log("Text preview:");
+        console.log(text.slice(0, 500));
+
         res.json({
             success: true,
             filename: req.file.originalname,
             type: req.file.mimetype,
-            size: req.file.size
+            size: req.file.size,
+            textLength: text.length,
+            preview: text.slice(0, 500)
         });
 
-    }
+    } catch (err) {
 
-    catch (err) {
-
-        console.error(err);
+        console.error("Document extraction failed:", err);
 
         res.status(500).json({
             error: err.message
@@ -52,7 +60,6 @@ app.post("/upload", upload.single("document"), (req, res) => {
     }
 
 });
-
 app.post("/persona", (req, res) => {
 
     const { persona } = req.body;
