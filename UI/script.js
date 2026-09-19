@@ -107,6 +107,8 @@ const dpGrid = document.getElementById("dpGrid");
 const dpFileInput = document.getElementById("dpFileInput");
 const emojiBtn = document.getElementById("emojiBtn");
 const emojiPanel = document.getElementById("emojiPanel");
+const addBtn = document.getElementById("addBtn");
+const fileInput = document.getElementById("fileInput");
 const videoCallBtn = document.getElementById("videoCallBtn");
 const voiceCallBtn = document.getElementById("voiceCallBtn");
 const callOverlay = document.getElementById("callOverlay");
@@ -345,6 +347,22 @@ function updateMemoryFromServer(memory) {
 
 sendBtn.addEventListener("click", sendMessage);
 msgInput.addEventListener("keydown", (e) => { if (e.key === "Enter") sendMessage(); });
+
+// ================== FILE UPLOAD ==================
+
+addBtn.addEventListener("click", () => {
+    fileInput.click();
+});
+
+fileInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+
+    if (!file) return;
+
+    console.log("Selected file:", file);
+    console.log("Name:", file.name);
+    console.log("Type:", file.type);
+});
 
 // ================== PERSONA SWITCH ==================
 async function switchPersona(persona) {
