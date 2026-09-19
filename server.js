@@ -34,7 +34,6 @@ app.post("/upload", upload.single("document"), async (req, res) => {
         console.log("File size:", req.file.size);
 
         const text = await extractText(req.file);
-
         console.log("Extracted text length:", text.length);
 
         console.log("Text preview:");
@@ -60,6 +59,7 @@ app.post("/upload", upload.single("document"), async (req, res) => {
     }
 
 });
+
 app.post("/persona", (req, res) => {
 
     const { persona } = req.body;

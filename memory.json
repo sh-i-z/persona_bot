@@ -87,10 +87,14 @@
     {
       "user": "problem statement kya hhh",
       "assistant": "Problem statement basically batata hai ki hum kis real‑world issue ko solve karna chahte hain. 📄  \nPDF ka subject ya thoda sa context share kar de, fir main uske hisaab se ek clear problem statement likh deta hoon, ok? 😊"
+    },
+    {
+      "user": "what is this that i have sent u",
+      "assistant": "Mujhe abhi koi PDF dikhayi nahi de rahi hai, shayad upload karna miss ho gaya 🤔. Jaldi se bhej de, phir main turant summary aur problem statement nikaal ke de dunga, ok? 🌟"
     }
   ],
   "currentPersonality": "protective",
-  "personalityCount": 0,
+  "personalityCount": 1,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
