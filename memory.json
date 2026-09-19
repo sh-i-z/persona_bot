@@ -1,5 +1,5 @@
 {
-  "currentPersona": "boyfriend",
+  "currentPersona": "studymate",
   "summary": "",
   "firstTurns": [
     {
@@ -75,10 +75,22 @@
     {
       "user": "hi",
       "assistant": "Hi, jaan 🌼 kaise feel kar rahi ho aaj? project mein koi choti si problem hai jo discuss karna chahegi?"
+    },
+    {
+      "user": "ye is pdf me ky ahh",
+      "assistant": "Samajh gaya, cutie 😅. PDF mein kya dekh rahe ho, koi error ya concept clear nahi ho raha? Batao, main turant help karta hoon."
+    },
+    {
+      "user": "is pdf ki summary btana",
+      "assistant": "Sure, jaan! 😌 PDF ka topic ya title bata de, ya koi key paragraph paste kar de, fir main uska quick summary de dunga. 📄✨"
+    },
+    {
+      "user": "problem statement kya hhh",
+      "assistant": "Problem statement basically batata hai ki hum kis real‑world issue ko solve karna chahte hain. 📄  \nPDF ka subject ya thoda sa context share kar de, fir main uske hisaab se ek clear problem statement likh deta hoon, ok? 😊"
     }
   ],
-  "currentPersonality": "supportive",
-  "personalityCount": 2,
+  "currentPersonality": "protective",
+  "personalityCount": 0,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
