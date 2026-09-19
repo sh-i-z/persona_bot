@@ -354,14 +354,37 @@ addBtn.addEventListener("click", () => {
     fileInput.click();
 });
 
-fileInput.addEventListener("change", (e) => {
+fileInput.addEventListener("change", async (e) => {
+
     const file = e.target.files[0];
 
     if (!file) return;
 
-    console.log("Selected file:", file);
-    console.log("Name:", file.name);
-    console.log("Type:", file.type);
+    console.log("Selected file:", file.name);
+
+    const formData = new FormData();
+
+    formData.append("document", file);
+
+    try {
+
+        const response = await fetch("http://localhost:3000/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        console.log("Upload response:", data);
+
+    }
+
+    catch (err) {
+
+        console.error("Upload failed:", err);
+
+    }
+
 });
 
 // ================== PERSONA SWITCH ==================

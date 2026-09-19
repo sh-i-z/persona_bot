@@ -1,5 +1,5 @@
 {
-  "currentPersona": "bestfriend",
+  "currentPersona": "boyfriend",
   "summary": "",
   "firstTurns": [
     {
@@ -71,10 +71,14 @@
     {
       "user": "yrr",
       "assistant": "Bro yaar Shruti buddy, acha hai, ab thoda better feel ho raha hai na? Main toh soch raha tha, tumhare project ke liye kuch motivation ki zaroorat hai. Tu toh ek rockstar hai, jaan! Tumhari mehnat aur lagan se tumhari project zaroor safal hogi. Main toh tumhare saath hoon, har kadam pe. Chalo, ek chhoti si exercise karte hain, tumhari project ki goals ko achieve karne ke liye. Tumhare goals kya hain, jaan?"
+    },
+    {
+      "user": "hi",
+      "assistant": "Hi, jaan 🌼 kaise feel kar rahi ho aaj? project mein koi choti si problem hai jo discuss karna chahegi?"
     }
   ],
   "currentPersonality": "supportive",
-  "personalityCount": 1,
+  "personalityCount": 2,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
