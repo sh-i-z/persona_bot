@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import multer from "multer";
 
 import { callLLM } from "./llm.js";
 import { loadMemory, saveMemory } from "./memory.js";
@@ -9,12 +10,48 @@ import { detectEmotion } from "./emotion.js";
 import { changePersona } from "./memory.js";
 
 const app = express();
+const upload = multer({ storage: multer.memoryStorage() });
 
 app.use(cors());
 app.use(express.json());
 
 // Load memory once when server starts
 const memory = loadMemory();
+
+app.post("/upload", upload.single("document"), (req, res) => {
+
+    try {
+
+        if (!req.file) {
+            return res.status(400).json({
+                error: "No file uploaded"
+            });
+        }
+
+        console.log("File received:", req.file.originalname);
+        console.log("File type:", req.file.mimetype);
+        console.log("File size:", req.file.size);
+
+        res.json({
+            success: true,
+            filename: req.file.originalname,
+            type: req.file.mimetype,
+            size: req.file.size
+        });
+
+    }
+
+    catch (err) {
+
+        console.error(err);
+
+        res.status(500).json({
+            error: err.message
+        });
+
+    }
+
+});
 
 app.post("/persona", (req, res) => {
 
