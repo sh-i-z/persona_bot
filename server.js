@@ -9,6 +9,7 @@ import { generateSummary } from "./summary.js";
 import { detectEmotion } from "./emotion.js";
 import { changePersona } from "./memory.js";
 import { extractText } from "./RAG/documentloader/documentLoader.js";
+import { chunkText } from "./RAG/chunker/textChunker.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -39,12 +40,20 @@ app.post("/upload", upload.single("document"), async (req, res) => {
         console.log("Text preview:");
         console.log(text.slice(0, 500));
 
+        const chunks = chunkText(text);
+
+        console.log("Total chunks:", chunks.length);
+
+        console.log("First chunk:");
+        console.log(chunks[0]);
+
         res.json({
             success: true,
             filename: req.file.originalname,
             type: req.file.mimetype,
             size: req.file.size,
             textLength: text.length,
+            chunks: chunks.length,
             preview: text.slice(0, 500)
         });
 
