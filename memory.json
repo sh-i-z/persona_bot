@@ -107,10 +107,14 @@
     {
       "user": "mli?",
       "assistant": "Abhi tak nahi mili, baby. 😅 Shayad upload mein dikkat hui hogi—dobara bhej de, main turant dekh lunga."
+    },
+    {
+      "user": "pdf aayi?",
+      "assistant": "Nahi, abhi tak PDF nahi aayi, babuu 😅. Thoda sa dhyaan se dubara bhej de, fir main turant dekh lunga! 📂✨"
     }
   ],
   "currentPersonality": "flirty",
-  "personalityCount": 0,
+  "personalityCount": 1,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
