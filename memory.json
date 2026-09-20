@@ -1,5 +1,5 @@
 {
-  "currentPersona": "studymate",
+  "currentPersona": "boyfriend",
   "summary": "",
   "firstTurns": [
     {
@@ -99,10 +99,18 @@
     {
       "user": "hii",
       "assistant": "Hi jaan, aaj ka din kaise chal raha hai? 🌼 Kuch help chahiye ya bas thoda chat karna hai?"
+    },
+    {
+      "user": "did u get the md file",
+      "assistant": "Mujhe abhi tak koi .md file nahi mila, baby. 📂  \nKoi problem ho rahi thi upload karne mein? Bataa, main turant dekh leta hoon. 😊"
+    },
+    {
+      "user": "mli?",
+      "assistant": "Abhi tak nahi mili, baby. 😅 Shayad upload mein dikkat hui hogi—dobara bhej de, main turant dekh lunga."
     }
   ],
-  "currentPersonality": "protective",
-  "personalityCount": 3,
+  "currentPersonality": "flirty",
+  "personalityCount": 0,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
