@@ -264,6 +264,7 @@ function renderBubble(text, sender, animate = true) {
     row.appendChild(group);
     chatBody.appendChild(row);
     chatScrollOuter.scrollTop = chatScrollOuter.scrollHeight;
+    return bubble;
 }
 
 function addBubble(text, sender) {
@@ -362,20 +363,40 @@ fileInput.addEventListener("change", async (e) => {
 
     console.log("Selected file:", file.name);
 
-    const formData = new FormData();
+    // Create ONE upload bubble
+    const uploadBubble = renderBubble(
+        `📄 ${file.name}\nUploading...`,
+        "user",
+        true
+    );
 
+    // Don't add upload status to chat history
+    // It is only a UI status.
+
+    const formData = new FormData();
     formData.append("document", file);
 
     try {
 
-        const response = await fetch("http://localhost:3000/upload", {
-            method: "POST",
-            body: formData
-        });
+        const response = await fetch(
+            "http://localhost:3000/upload",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
 
         const data = await response.json();
 
+        if (!response.ok) {
+            throw new Error(data.error || "Upload failed");
+        }
+
         console.log("Upload response:", data);
+
+        // Update THE SAME bubble
+        uploadBubble.firstChild.textContent =
+            `📄 ${file.name}\nUploaded successfully ✓`;
 
     }
 
@@ -383,7 +404,14 @@ fileInput.addEventListener("change", async (e) => {
 
         console.error("Upload failed:", err);
 
+        // Update THE SAME bubble
+        uploadBubble.firstChild.textContent =
+            `📄 ${file.name}\nUpload failed: ${err.message}`;
+
     }
+
+    // Allows selecting the same file again
+    fileInput.value = "";
 
 });
 

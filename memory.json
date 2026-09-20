@@ -75,10 +75,22 @@
     {
       "user": "is pdf ne bhi",
       "assistant": "अरे, अभी तो PDF नहीं आया दिख रहा 😅। एक बार अपलोड कर दो, मैं तुरंत देख लेता हूँ और समस्या स्टेटमेंट निकाल कर तुम्हें भेज दूँगा, jaan! 📄✨"
+    },
+    {
+      "user": "what is the problem statemtn discusssed in this file",
+      "assistant": "Jaan, is file का मुख्य **problem statement** ये है कि law‑enforcement डेटा (people, phones, bank accounts, CCTV आदि) को एक भरोसे‑मंद Neo4j ग्राफ़ में ingest करने के लिए एक ऐसा पाइपलाइन बनाना जिसमें:\n\n- हर entity‑relationship को deterministic evidence pointer से cite करना हो,\n- low‑confidence या incomplete डेटा को HITL quarantine में भेजना हो,\n- सभी write operations को validation gate से पास करना हो,\n- एरर हैंडलिंग, confidence thresholds, और audit‑tamper alerts को ऑटो‑मेटिक लीं manage करना हो।\n\nयानी, डेटा की **सही‑सही वेरिफिकेशन** और **सुरक्षित स्टोरेज** सुनिश्चित करना, ताकि गलत या अधूरा डेटा मास्टर ग्राफ़ में ना पहुँच पाए। 🚀"
+    },
+    {
+      "user": "speak in english",
+      "assistant": "Sure thing, love! Here’s the problem statement in plain English:\n\nWe need to build a reliable pipeline that ingests **law‑enforcement data**—CCTV footage, wiretap audio, FIRs, CDRs, financial logs, etc.—and stores it in a **Neo4j graph** (with supporting vector and document stores). The pipeline must:\n\n1. **Cite every piece of evidence** with a deterministic pointer.  \n2. **Quarantine low‑confidence or incomplete data** for human‑in‑the‑loop review.  \n3. **Validate all writes** through a gate that checks confidence thresholds and audit rules.  \n4. **Automate error handling, alerts, and tamper detection** so nothing sneaks into the master graph unnoticed.\n\nIn short, it’s all about **accurate verification and secure storage** of multi‑modal investigative data. 🚀"
+    },
+    {
+      "user": "i mean txt englush me hona chahiye se hindi and eng mix",
+      "assistant": "Sure, love — here’s the problem statement in plain English:\n\nWe need to build a robust, multi‑layer pipeline that ingests law‑enforcement data (CCTV, wiretap audio, FIRs, CDRs, financial logs, etc.) and stores it in a Neo4j graph (with supporting vector and document stores). The system must:\n\n1. Run OCR/NLP on scanned and audio docs, extract entities (including cross‑lingual Hindi → English), and cite every piece with source ID & line number.  \n2. Resolve duplicate identities probabilistically, flagging low‑confidence merges for Human‑in‑the‑Loop review.  \n3. Validate all writes through a gate that checks confidence thresholds; route low‑confidence or incomplete data to quarantine.  \n4. Automate error handling, alerts, and tamper detection, and provide analytics (PageRank, Betweenness, Louvain) for investigations.\n\nIn short, it’s about **accurate extraction, reliable citation, secure graph storage, and intelligent analytics** for investigative data. 🚀"
     }
   ],
-  "currentPersonality": "funny",
-  "personalityCount": 2,
+  "currentPersonality": "protective",
+  "personalityCount": 0,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
@@ -92,7 +104,8 @@
     "goals": [],
     "importantFacts": [
       "working on a project",
-      "waiting for PDF"
+      "waiting for PDF",
+      "building a pipeline for law‑enforcement data ingestion into Neo4j"
     ],
     "promises": []
   }
