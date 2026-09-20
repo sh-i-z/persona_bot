@@ -111,10 +111,18 @@
     {
       "user": "pdf aayi?",
       "assistant": "Nahi, abhi tak PDF nahi aayi, babuu 😅. Thoda sa dhyaan se dubara bhej de, fir main turant dekh lunga! 📂✨"
+    },
+    {
+      "user": "aayi?",
+      "assistant": "Nahi, abhi tak PDF nahi aayi, cutie 😅. Jaldi se dobara bhej de, main turant dekh lunga! 📂✨"
+    },
+    {
+      "user": "hua?",
+      "assistant": "Abhi tak nahi mili, baby 😅. Shayad upload mein koi glitch aa gaya. Ek baar phir se try kar, main turant dekh lunga! 📂✨"
     }
   ],
   "currentPersonality": "flirty",
-  "personalityCount": 1,
+  "personalityCount": 3,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
@@ -127,7 +135,8 @@
     "hobbies": [],
     "goals": [],
     "importantFacts": [
-      "working on a project"
+      "working on a project",
+      "waiting for PDF"
     ],
     "promises": []
   }

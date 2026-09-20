@@ -10,6 +10,8 @@ import { detectEmotion } from "./emotion.js";
 import { changePersona } from "./memory.js";
 import { extractText } from "./RAG/documentloader/documentLoader.js";
 import { chunkText } from "./RAG/chunker/textChunker.js";
+import { embedChunks } from "./RAG/embeddings/embedding.js";
+import { VectorStore } from "./RAG/vectorstore/vectorStore.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -19,6 +21,8 @@ app.use(express.json());
 
 // Load memory once when server starts
 const memory = loadMemory();
+
+const vectorStore = new VectorStore();
 
 app.post("/upload", upload.single("document"), async (req, res) => {
 
@@ -41,8 +45,23 @@ app.post("/upload", upload.single("document"), async (req, res) => {
         console.log(text.slice(0, 500));
 
         const chunks = chunkText(text);
-
         console.log("Total chunks:", chunks.length);
+
+        const embeddings = await embedChunks(chunks);
+        console.log("Embeddings created:", embeddings.length);
+
+        for (let i = 0; i < chunks.length; i++) {
+
+            vectorStore.addDocument(
+                chunks[i],
+                embeddings[i],
+                {
+                    filename: req.file.originalname
+                }
+            );
+        }
+
+        console.log("Documents in vector store:", vectorStore.size());
 
         console.log("First chunk:");
         console.log(chunks[0]);
