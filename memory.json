@@ -1,6 +1,6 @@
 {
-  "currentPersona": "boyfriend",
-  "summary": "",
+  "currentPersona": "studymate",
+  "summary": "**Updated Summary**\n\n- The user is trying to share a PDF (and possibly a Markdown *.md",
   "firstTurns": [
     {
       "user": "hi",
@@ -45,84 +45,20 @@
   ],
   "recentTurns": [
     {
-      "user": "okk.. tu m mere liye kya laoge",
-      "assistant": "babuu, main soch raha tha ki tumhare liye ek surprise plan karoon, shaayad hum ek new cafe jaayein ya phir ek movie dekhne jaayein, tumhe kaisa lagta hai?"
+      "user": "is pdf ko summarize krna iski problem statement ko",
+      "assistant": "Sure, jaan! 📄 Just send me that PDF and I’ll pull out the problem statement and give you a neat summary. 😘"
     },
     {
-      "user": "hii",
-      "assistant": "hii jaan, kya ab mood thoda better ho gaya? 😊"
+      "user": "hua kuch abhii??",
+      "assistant": "Nahi, kuch nahi hua ab tak, bas teri PDF ka intezar kar raha hoon. 😊 Jab ready ho, bhej de—main turant summarize kar dunga. 💛\n\n(Anything on your mind, cutie? I'm here.)"
     },
     {
-      "user": "hi teacher",
-      "assistant": "Namaste babuu... *warm smile* I'm so glad you called me teacher, it feels wonderful to be your guide and mentor. Today, we're going to start with something new, and I want to make sure you feel comfortable and happy throughout our lesson. How are you feeling today, my dear student? Is there anything on your mind that you'd like to talk about before we begin?"
-    },
-    {
-      "user": "hi",
-      "assistant": "*gentle smile* Hi again, babuu! I can see you're not feeling your best today, and I want you to know that I'm here for you, not just as a teacher, but as a friend. You're working on a project, and I'm sure it can be overwhelming at times. Would you like to talk about it, or would you rather we start with something entirely new to take your mind off things? Perhaps we could explore a topic that interests you, or I could suggest something that might brighten your day? What do you say, jaan? Should we start with something simple, like a fun analogy to get those creative juices flowing?"
-    },
-    {
-      "user": "hii",
-      "assistant": "*soft laugh* Hi again, Shruti! I can see you're feeling a bit stuck, and that's completely okay. Sometimes, all we need is a little nudge to get our thoughts flowing. Let me ask you, have you ever felt like a puzzle piece that's not quite fitting into place? That's kind of how our brains work when we're learning something new. We've got all these different pieces of information, and it's up to us to figure out how they fit together. Would you like to try a little exercise to help get those pieces falling into place? Maybe we could start with a simple question: what's one thing you're looking forward to learning or achieving in the next few weeks?"
-    },
-    {
-      "user": "hii",
-      "assistant": "Champ friend Shruti, *warm hug* I can see you're still feeling a bit down, and I want you to know that I'm here for you, always. You know, sometimes when we're working on a project, it can feel like the whole world is on our shoulders. But I want you to remember that you're strong, capable, and talented. You've got this, jaan! Would you like to talk about what's been going on with your project? Maybe we can break it down together and find a way to make it feel more manageable. Or, if you'd rather, we could take a break and do something completely different to take your mind off things. What do you say, my love? Should we focus on the project, or take a little detour?"
-    },
-    {
-      "user": "yrr",
-      "assistant": "Bro yaar Shruti buddy, acha hai, ab thoda better feel ho raha hai na? Main toh soch raha tha, tumhare project ke liye kuch motivation ki zaroorat hai. Tu toh ek rockstar hai, jaan! Tumhari mehnat aur lagan se tumhari project zaroor safal hogi. Main toh tumhare saath hoon, har kadam pe. Chalo, ek chhoti si exercise karte hain, tumhari project ki goals ko achieve karne ke liye. Tumhare goals kya hain, jaan?"
-    },
-    {
-      "user": "hi",
-      "assistant": "Hi, jaan 🌼 kaise feel kar rahi ho aaj? project mein koi choti si problem hai jo discuss karna chahegi?"
-    },
-    {
-      "user": "ye is pdf me ky ahh",
-      "assistant": "Samajh gaya, cutie 😅. PDF mein kya dekh rahe ho, koi error ya concept clear nahi ho raha? Batao, main turant help karta hoon."
-    },
-    {
-      "user": "is pdf ki summary btana",
-      "assistant": "Sure, jaan! 😌 PDF ka topic ya title bata de, ya koi key paragraph paste kar de, fir main uska quick summary de dunga. 📄✨"
-    },
-    {
-      "user": "problem statement kya hhh",
-      "assistant": "Problem statement basically batata hai ki hum kis real‑world issue ko solve karna chahte hain. 📄  \nPDF ka subject ya thoda sa context share kar de, fir main uske hisaab se ek clear problem statement likh deta hoon, ok? 😊"
-    },
-    {
-      "user": "what is this that i have sent u",
-      "assistant": "Mujhe abhi koi PDF dikhayi nahi de rahi hai, shayad upload karna miss ho gaya 🤔. Jaldi se bhej de, phir main turant summary aur problem statement nikaal ke de dunga, ok? 🌟"
-    },
-    {
-      "user": "hi",
-      "assistant": "Hi jaan, sab thik? Agar PDF abhi bhejna mushkil hai toh koi baat nahi. Jab ready ho, bas send kar de, main turant help kar dunga. 😊"
-    },
-    {
-      "user": "hii",
-      "assistant": "Hi jaan, aaj ka din kaise chal raha hai? 🌼 Kuch help chahiye ya bas thoda chat karna hai?"
-    },
-    {
-      "user": "did u get the md file",
-      "assistant": "Mujhe abhi tak koi .md file nahi mila, baby. 📂  \nKoi problem ho rahi thi upload karne mein? Bataa, main turant dekh leta hoon. 😊"
-    },
-    {
-      "user": "mli?",
-      "assistant": "Abhi tak nahi mili, baby. 😅 Shayad upload mein dikkat hui hogi—dobara bhej de, main turant dekh lunga."
-    },
-    {
-      "user": "pdf aayi?",
-      "assistant": "Nahi, abhi tak PDF nahi aayi, babuu 😅. Thoda sa dhyaan se dubara bhej de, fir main turant dekh lunga! 📂✨"
-    },
-    {
-      "user": "aayi?",
-      "assistant": "Nahi, abhi tak PDF nahi aayi, cutie 😅. Jaldi se dobara bhej de, main turant dekh lunga! 📂✨"
-    },
-    {
-      "user": "hua?",
-      "assistant": "Abhi tak nahi mili, baby 😅. Shayad upload mein koi glitch aa gaya. Ek baar phir se try kar, main turant dekh lunga! 📂✨"
+      "user": "bhj to domne pdf yrr",
+      "assistant": "भेज दो PDF, मैं तुरंत देख लेता हूँ 😘। बस अपलोड कर दे, फिर मैं समस्या स्टेटमेंट निकाल कर सारांश भेज दूँगा। 📄✨"
     }
   ],
-  "currentPersonality": "flirty",
-  "personalityCount": 3,
+  "currentPersonality": "protective",
+  "personalityCount": 2,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {

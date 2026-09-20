@@ -12,6 +12,7 @@ import { extractText } from "./RAG/documentloader/documentLoader.js";
 import { chunkText } from "./RAG/chunker/textChunker.js";
 import { embedChunks } from "./RAG/embeddings/embedding.js";
 import { VectorStore } from "./RAG/vectorstore/vectorStore.js";
+import { retrieveRelevantChunks } from "./RAG/retrieval/retriever.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -88,6 +89,40 @@ app.post("/upload", upload.single("document"), async (req, res) => {
 
 });
 
+app.post("/retrieve", async (req, res) => {
+    try {
+        const { question } = req.body;
+
+        if (!question) {
+            return res.status(400).json({
+                error: "Question is required"
+            });
+        }
+
+        console.log("Retrieval question:", question);
+
+        const results = await retrieveRelevantChunks(
+            question,
+            vectorStore,
+            3
+        );
+
+        console.log("Retrieved chunks:", results);
+
+        res.json({
+            success: true,
+            results
+        });
+
+    } catch (err) {
+        console.error("Retrieval failed:", err);
+
+        res.status(500).json({
+            error: err.message
+        });
+    }
+});
+
 app.post("/persona", (req, res) => {
 
     const { persona } = req.body;
@@ -100,6 +135,8 @@ app.post("/persona", (req, res) => {
     });
 
 });
+
+
 
 app.post("/chat", async (req, res) => {
 
@@ -121,10 +158,48 @@ app.post("/chat", async (req, res) => {
         }
 
         // ==========================
+        // Retrieve Relevant Document Context
+        // ==========================
+
+        let ragMessage = message;
+
+        if (vectorStore.size() > 0) {
+
+            const retrievedChunks = await retrieveRelevantChunks(
+                message,
+                vectorStore,
+                3
+            );
+
+            const context = retrievedChunks
+                .map((result, index) => {
+                    return `--- Context ${index + 1} ---\n${result.chunk}`;
+                })
+                .join("\n\n");
+
+            ragMessage = `
+Use the following context from the user's uploaded documents
+to help answer the user's message.
+
+If the answer is not available in the provided context,
+answer normally based on your existing knowledge.
+
+Context:
+${context}
+
+User message:
+${message}
+`;
+
+            console.log("RAG Context:");
+            console.log(context);
+        }
+
+        // ==========================
         // Generate AI Reply
         // ==========================
 
-        const reply = await callLLM(message, memory);
+        const reply = await callLLM(ragMessage, memory);
 
         // ==========================
         // Store Conversation Turn
