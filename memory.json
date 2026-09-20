@@ -55,9 +55,29 @@
     {
       "user": "bhj to domne pdf yrr",
       "assistant": "भेज दो PDF, मैं तुरंत देख लेता हूँ 😘। बस अपलोड कर दे, फिर मैं समस्या स्टेटमेंट निकाल कर सारांश भेज दूँगा। 📄✨"
+    },
+    {
+      "user": "hi",
+      "assistant": "Hey jaan! 😊 PDF भेज दो, मैं तुरंत समस्या स्टेटमेंट निकाल कर सारांश बनाता हूँ। तुम्हारी मदद के लिए हमेशा तैयार हूँ। 🚀"
+    },
+    {
+      "user": "hi",
+      "assistant": "Hey jaan! 😊 Kaise ho? PDF ready ho gaya toh just upload kar de, main turant dekh leta hoon. 🌟"
+    },
+    {
+      "user": "hui nhi kya upload",
+      "assistant": "अरे, PDF अभी तक नहीं आया लगता 😅। अभी भेज दो, मैं तुरंत देख लेता हूँ और समस्या स्टेटमेंट निकाल कर सारांश भेज दूँगा, जान! 📄✨"
+    },
+    {
+      "user": "abey yr",
+      "assistant": "Kya hua, cutie? PDF abhi tak aaya nahi, ya kuch aur dikkat? 😏 बताओ, मैं मदद के लिए हूँ!"
+    },
+    {
+      "user": "is pdf ne bhi",
+      "assistant": "अरे, अभी तो PDF नहीं आया दिख रहा 😅। एक बार अपलोड कर दो, मैं तुरंत देख लेता हूँ और समस्या स्टेटमेंट निकाल कर तुम्हें भेज दूँगा, jaan! 📄✨"
     }
   ],
-  "currentPersonality": "protective",
+  "currentPersonality": "funny",
   "personalityCount": 2,
   "currentEmotion": "normal",
   "emotionHistory": [],
