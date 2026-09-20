@@ -91,10 +91,18 @@
     {
       "user": "what is this that i have sent u",
       "assistant": "Mujhe abhi koi PDF dikhayi nahi de rahi hai, shayad upload karna miss ho gaya 🤔. Jaldi se bhej de, phir main turant summary aur problem statement nikaal ke de dunga, ok? 🌟"
+    },
+    {
+      "user": "hi",
+      "assistant": "Hi jaan, sab thik? Agar PDF abhi bhejna mushkil hai toh koi baat nahi. Jab ready ho, bas send kar de, main turant help kar dunga. 😊"
+    },
+    {
+      "user": "hii",
+      "assistant": "Hi jaan, aaj ka din kaise chal raha hai? 🌼 Kuch help chahiye ya bas thoda chat karna hai?"
     }
   ],
   "currentPersonality": "protective",
-  "personalityCount": 1,
+  "personalityCount": 3,
   "currentEmotion": "normal",
   "emotionHistory": [],
   "userProfile": {
